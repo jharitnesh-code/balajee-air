@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BALAJEE AIR CONDITIONING ENGG.</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(120deg,#dbeafe,#f8fafc);
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    margin:10px;
+    letter-spacing:3px;
+}
+
+/* NAVBAR */
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+nav a{
+    margin:18px;
+    text-decoration:none;
+    color:#0f172a;
+    font-weight:600;
+}
+
+/* SECTION */
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    color:#0f172a;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* GLASS CARD */
+.card{
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.whatsapp{
+    background:#22c55e;
+}
+
+/* FOOTER */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<h1>BALAJEE AIR CONDITIONING ENGG.</h1>
+<p>Modern Cooling Solutions for Homes & Offices</p>
+</header>
+
+<!-- NAVBAR -->
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Reviews</a>
+<a href="#">Contact</a>
+</nav>
+
+<!-- SERVICES -->
+<section>
+<h2>OUR SERVICES</h2>
+<div class="grid">
+<div class="card">A/C INSTALLATION</div>
+<div class="card">A/C SERVICE & REPAIR</div>
+<div class="card">REFRIGERATOR REPAIR</div>
+<div class="card">GEYSER SERVICE</div>
+<div class="card">WATER COOLER SERVICE</div>
+<div class="card">A/C ON RENT</div>
+</div>
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+<section>
+<h2>CUSTOMER REVIEWS</h2>
+<div class="grid">
+<div class="card">⭐⭐⭐⭐⭐<br>Very fast and professional service!</div>
+<div class="card">⭐⭐⭐⭐⭐<br>Affordable pricing and trusted.</div>
+<div class="card">⭐⭐⭐⭐⭐<br>Best AC service in Noida.</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>CONTACT US</h2>
+<div class="card">
+<p><b>A.K. JHA</b></p>
+<p>📞 9871407918</p>
+<p>🏠 Opp. J-88, Chaura, Sadatpur, Sector-22, Noida (U.P.)</p>
+
+<!-- Fully working Call Now & WhatsApp Buttons -->
+<a class="btn" href="#" id="callBtn">Call Now</a>
+<br><br>
+<a class="btn whatsapp" href="#" id="waBtn" target="_blank">WhatsApp</a>
+</div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section>
+<h2>OUR LOCATION</h2>
+<div class="card">
+<iframe
+src="https://maps.google.com/maps?q=noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="250" style="border:0;">
+</iframe>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 BALAJEE AIR CONDITIONING ENGG. | All Rights Reserved
+</footer>
+
+<!-- SCRIPT TO HANDLE CALL & WHATSAPP BUTTONS -->
+<script>
+const callBtn = document.getElementById('callBtn');
+const waBtn = document.getElementById('waBtn');
+const phoneNumber = "9871407918";
+
+// Detect mobile
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+// Call button
+callBtn.addEventListener('click', function(){
+    if(isMobile){
+        window.location.href = "tel:"+phoneNumber; // Mobile dialer open
+    } else {
+        alert("Please call "+phoneNumber+" from your phone."); // Desktop alert
+    }
+});
+
+// WhatsApp button
+waBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    if(isMobile){
+        window.location.href = "https://wa.me/"+phoneNumber; // Mobile app
+    } else {
+        window.open("https://web.whatsapp.com/send?phone="+phoneNumber,"_blank"); // Desktop WhatsApp Web
+    }
+});
+</script>
+
+</body>
+  </html>
